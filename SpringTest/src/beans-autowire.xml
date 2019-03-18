@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="address" class="com.fehead.spring.autowire.Address">
+		<property name="city" value="Beijing"></property>
+		<property name="street" value="Qinghua"></property>
+	</bean>
+	
+	<bean id="car" class="com.fehead.spring.autowire.Car">
+		<property name="brand" value="WuLing"></property>
+		<property name="price" value="20000"></property>
+		<property name="maxSpeed" value="240"></property>
+	</bean>
+
+
+	<bean id="person" class="com.fehead.spring.autowire.Person" p:name="Tom" autowire="byType">
+		<!--
+			 常规配置 
+			<property name="name" value="Tom"></property>
+			<property name="address" ref="address"></property>
+			<property name="car" ref="car"></property>
+		-->
+	</bean>
+</beans>
