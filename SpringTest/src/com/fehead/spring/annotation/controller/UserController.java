@@ -8,14 +8,13 @@ import com.fehead.spring.annotation.service.UserService;
 @Controller
 public class UserController { 
 	
-	@Autowired
+	//@Autowired
 	private UserService userService;
 	
-	//@Autowired
+	@Autowired
 	public void setUserService(UserService userService) {
 		this.userService = userService;
 	}
-
 
 	public void execute(){
 		System.out.println("UserController execute..."); 

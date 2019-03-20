@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="address" p:city="Beijing" 
+	p:street="Qinghua" abstract="true"></bean>
+	
+	<!-- address2继承address -->
+	<bean id="address2" class="com.fehead.spring.autowire.Address" 
+	 p:street="Beida" parent="address"></bean>
+	
+	<bean id="car" class="com.fehead.spring.autowire.Car" 
+	p:brand="Aodi" p:price="200000" p:maxSpeed="240"></bean>
+	
+	<bean id="person" class="com.fehead.spring.autowire.Person"
+	p:name="Tom" p:address-ref="address2" depends-on="car">
+	</bean>
+	
+	
+</beans>

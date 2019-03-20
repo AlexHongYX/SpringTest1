@@ -1,4 +1,3 @@
-
 package com.fehead.spring.bean;
 
 public class Car {
