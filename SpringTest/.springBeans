@@ -16,6 +16,8 @@
 		<config>src/beans-factory.xml</config>
 		<config>src/beans-factoryBean.xml</config>
 		<config>src/beans-annotation.xml</config>
+		<config>src/Spring-AOP.xml</config>
+		<config>src/hjgdsgysaguyw.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
